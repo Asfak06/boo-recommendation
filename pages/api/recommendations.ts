@@ -34,6 +34,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       const { count, rows: recommendations } = await Recommendation.findAndCountAll({
         offset,
         limit,
+        order: [['updatedAt', 'DESC']],
       });
     
       const totalPages = Math.ceil(count / PAGE_SIZE);

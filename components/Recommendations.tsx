@@ -84,6 +84,7 @@ const Recommendations = (): JSX.Element => {
         {recommendations.map((recommendation, i) => (
           <Link key={recommendation.id} href={`/details/${recommendation.bookId || recommendation.id}`}>
             <div className={cardStyles}>
+              <p className="mb-4 font-bold">Recommended by {recommendation.userName}</p>
               {recommendation.cover ? (
                 <img
                   src={recommendation.cover}
@@ -102,14 +103,11 @@ const Recommendations = (): JSX.Element => {
 
               <h3 className="text-lg font-semibold mb-2">{recommendation.title || recommendation.bookName}</h3>
               <p className=" mb-2">By {recommendation.author}</p>
-              {recommendation.recommendationsCount ? (
+              {recommendation.recommendationsCount && 
                 <p className="">
                   {recommendation.recommendationsCount} Recommendations <br />
-                  Recommended by {recommendation.userName}
                 </p>
-              ) : (
-                <p className="">Recommended by {recommendation.userName}</p>
-              )}
+             }
             </div>
           </Link>
         ))}
