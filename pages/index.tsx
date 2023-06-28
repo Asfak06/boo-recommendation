@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <Layout>
       <SearchSection />
-      <h3 className="text-2xl text-center font-semibold mb-5">Reccommendations are here</h3>
+      <h3 className="text-2xl text-center font-semibold mt-8 mb-10">Reccommendations are here</h3>
 
       <Recommendations/>
 

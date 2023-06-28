@@ -3,6 +3,7 @@ import axios from 'axios';
 import { useDebounce } from 'use-debounce';
 import { useDarkMode } from './DarkModeContext';
 import Link from 'next/link';
+import { BsHourglassSplit } from 'react-icons/bs';
 
 const SearchSection = () => {
   const { darkMode } = useDarkMode();
@@ -40,7 +41,7 @@ const SearchSection = () => {
   };
   
 
-  const inputStyles = `w-full rounded-lg py-2 px-4 outline-none focus:ring-2 ${
+  const inputStyles = `w-full rounded-lg my-5 py-2 px-4 outline-none focus:ring-2 ${
     darkMode ? 'bg-gray-800 text-white' : 'bg-gray-200 text-gray-800'
   }`;
 
@@ -57,7 +58,10 @@ const SearchSection = () => {
         value={searchQuery}
         onChange={handleInputChange}
       />
-      {isLoading && <p>Loading...</p>}
+      {isLoading &&     
+       <div className="flex items-center justify-center h-full">
+        <BsHourglassSplit className="animate-spin text-4xl" />
+      </div>}
       {error && <p>{error}</p>}
       <ul>
         {searchResults.map((result: any) => (

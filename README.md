@@ -1,6 +1,22 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Book Recommendation
 
-## Getting Started
+The Book Recommendation project is a web application that allows users to discover and recommend books. It provides a platform for users to share their favorite books, explore recommendations from others. The project is live and hosted on [https://book-recommendation-sigma.vercel.app/](https://book-recommendation-sigma.vercel.app/).
+A cloud MySql database is used for the live porject. 
+## Features
+
+- **Single Codebase**: The project is built using the React framework Next.js, which enables a single codebase for both the frontend and backend. This approach simplifies development and deployment processes.
+
+- **Type Safety**: TypeScript is used for enhanced type safety, providing a better development and maintenance experience by catching potential errors at compile-time.
+
+- **Styling with Tailwind CSS**: The project leverages Tailwind CSS, a utility-first CSS framework, for styling. This approach allows for rapid and consistent UI development.
+
+- **Dark Mode**: A Dark Mode feature is implemented to enhance the user experience and provide an alternative visual theme for users who prefer darker interfaces.
+
+- **Search Optimization**: The project incorporates a Debounce hook to optimize search functionality, reducing unnecessary API requests and improving performance.
+
+## Getting Started for local development
+
+To run locally , set up a mysql  database locally connect using user name, password & host inside the sequelize.js file. OR you could use a .env file. Then use the env variables inside sequielize.js file.
 
 First, run the development server:
 
@@ -14,25 +30,4 @@ pnpm dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
-
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
-
 The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
